@@ -1,0 +1,227 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f3bd;
+  
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80%;
+}
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  color: #333; /* Dark color for readability */
+  text-align: center;
+  padding: 0;
+  display: inline-block; /* Keeps the underline tight to the text */
+}
+.title-name{
+  margin:0;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+
+
+
+
+.main-card {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of items */
+  justify-content: space-between; /* Space out items evenly */
+  padding: 20px; /* Padding around the flex container */
+  max-width: 1400px; /* Maximum width of the container */
+  width: 100%; /* Full width for smaller screens */
+}
+
+.project {
+  flex: 1 1 280px; /* Flex-grow, flex-shrink, and flex-basis for responsive behavior */
+  max-width: calc(33.33% - 20px); /* Max width for each project card, allowing space for gaps */
+  height: 420px; /* Height for the project card */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(24, 3, 3, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  overflow: hidden; /* Prevent overflow of contents */
+  margin-bottom: 20px; /* Space between rows */
+  display: flex; /* Enable flex layout for the project card */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: space-between; /* Space out children evenly */
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+.project-img {
+  height: 50%; /* Adjust height to 50% of the project div */
+  overflow: hidden;
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-details {
+  padding: 15px;
+  box-sizing: border-box;
+  flex-grow: 1; /* Allow description to grow and take up available space */
+  display: flex;
+  background-color: white;
+  flex-direction: column; /* Stack details vertically */
+  justify-content: center; /* Center contents vertically */
+}
+
+.project-name p {
+  font-size: 18px;
+  margin: 0;
+  padding-left: 7px;
+}
+
+.project-description {
+  margin-bottom: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.project-description p {
+  font-size: 14px;
+  color: gray;
+  margin: 0;
+}
+
+.buttons {
+  display: flex; /* Keep buttons horizontal */
+  justify-content: space-between; /* Space out buttons */
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px; /* Use gap for spacing between buttons */
+}
+
+button {
+  flex: 1; /* Keep buttons equal size */
+  padding: 10px; /* Increased padding for buttons */
+  font-size: 14px; /* Font size for buttons */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border: 1px solid rgb(97, 93, 93);
+}
+
+.source-code-button {
+  background-color: black;
+  border-radius: 62px;
+}
+
+.source-code-button:hover {
+  background-color: white;
+  color: black;
+
+}
+
+.live-demo-button {
+  background-color: white;
+  border-radius: 62px;
+  color: black;
+}
+
+.live-demo-button:hover {
+  background-color: black;
+  color: white;
+}
+
+.button-container {
+  width: 10%; /* Full width to center the button */
+  display: flex;
+  justify-content: center;
+  
+}
+
+.github-button {
+  background: linear-gradient(135deg, #333, #000); /* Gradient for a modern look */
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 62px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.github-button:hover {
+  background: linear-gradient(135deg, #000, #333);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.github-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .main-card {
+    padding: 15px;
+  }
+
+  .project {
+    max-width: calc(50% - 10px); /* 2 items per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .main-card {
+    padding: 10px;
+  }
+
+  .project {
+    max-width: calc(100% - 10px); /* Full width for project cards on small screens */
+    margin: 10px 0; /* Add vertical margin for spacing */
+  }
+
+  .buttons {
+    gap: 5px; /* Reduce gap between buttons */
+  }
+
+  button {
+    padding: 8px; /* Smaller padding for buttons */
+    font-size: 12px; /* Smaller font size for buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  .main-card {
+    padding: 5px; /* Reduced padding on very small screens */
+  }
+
+  .buttons {
+    gap: 5px; /* Maintain gap for spacing between buttons */
+  }
+
+  button {
+    padding: 6px; /* Consistent smaller padding */
+    font-size: 10px; /* Consistent smaller font size */
+  }
+}
