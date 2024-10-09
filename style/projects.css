@@ -105,7 +105,7 @@ body {
 
 .buttons {
   display: flex; /* Keep buttons horizontal */
-  justify-content: space-between; /* Space out buttons */
+  justify-content: space-around; /* Space out buttons */
   align-items: center;
   margin-top: 10px;
   gap: 10px; /* Use gap for spacing between buttons */
@@ -113,7 +113,7 @@ body {
 
 button {
   flex: 1; /* Keep buttons equal size */
-  padding: 10px; /* Increased padding for buttons */
+  padding: 10px; /* Padding for buttons */
   font-size: 14px; /* Font size for buttons */
   color: #fff;
   border: none;
@@ -121,16 +121,17 @@ button {
   cursor: pointer;
   transition: background-color 0.2s ease;
   border: 1px solid rgb(97, 93, 93);
+  min-width: 100px; /* Minimum width to ensure buttons don't shrink too much */
 }
 
 .source-code-button {
   background-color: black;
   border-radius: 62px;
+  min-width: 120px; /* Additional minimum width for source code button */
 }
 
 .source-code-button:hover {
-  background-color: white;
-  color: black;
+  background-color: #333;
 
 }
 
@@ -138,11 +139,11 @@ button {
   background-color: white;
   border-radius: 62px;
   color: black;
+  min-width: 120px; /* Additional minimum width for live demo button */
 }
 
 .live-demo-button:hover {
-  background-color: black;
-  color: white;
+  opacity: 0.7;
 }
 
 .button-container {
@@ -204,6 +205,12 @@ button {
   .buttons {
     gap: 5px; /* Reduce gap between buttons */
   }
+  .source-code-button,
+  .live-demo-button
+  {
+    padding: 10px 20px;
+    
+  }
 
   button {
     padding: 8px; /* Smaller padding for buttons */
@@ -218,6 +225,13 @@ button {
 
   .buttons {
     gap: 5px; /* Maintain gap for spacing between buttons */
+    
+  }
+  .source-code-button,
+  .live-demo-button
+  {
+    padding: 10px 20px;
+    font-size: 16px;
   }
 
   button {
@@ -225,3 +239,5 @@ button {
     font-size: 10px; /* Consistent smaller font size */
   }
 }
+
+
