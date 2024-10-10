@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle Content</title>
+  <link rel="stylesheet" href="/style/about.css">
+  <style>
+   
+  </style>
+</head>
+<body>
+  <div class="button-container">
+    <button onclick="showContent('about')">About Me</button>
+    <button onclick="showContent('skills')">Skills</button>
+    <button onclick="showContent('contact')">Contact</button>
+  </div>
+
+  <div class="content-container">
+    <div id="about" class="content active">
+      <div class="intro-section">
+        <p class="intro-name">Hi, I'm Dhinagar!</p>
+        <p class="intro-text">I’m a Computer Science and Engineering student with a passion for technology and a strong interest in web development. I enjoy creating responsive, user-friendly designs and exploring new tools and frameworks to expand my skills.</p>
+      </div>
+      <div class="education-section">
+        <p class="section-title">Education</p>
+        <ul class="education-list">
+          <li class="education-item">
+            <p class="school-name">Meenakshi Sundaranar Sengundhar Higher Secondary School</p>
+            <p class="education-detail">Completed both 10th and 12th standard with an overall score of 88%.</p>
+          </li>
+          <li class="education-item">
+            <p class="school-name">Nandha College of Technology</p>
+            <p class="education-detail">Currently pursuing a Bachelor’s degree in Computer Science and Engineering, with a CGPA of 8.1 out of 10.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div id="skills" class="content">
+      <div class="skill-section">
+        <div class="skill-title">
+          <p>"I possess a diverse skill set in technology and design, enabling me to create effective and innovative solutions."</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-item">
+            <img src="/icon/java-svgrepo-com.svg" alt="Java">
+          </div>
+          <div class="skill-card-item">
+            <img src="/icon/git-svgrepo-com.svg" alt="Git">
+          </div>
+          <div class="skill-card-item">
+            <img src="/icon/html-5-svgrepo-com.svg" alt="HTML">
+          </div>
+          <div class="skill-card-item">
+            <img src="/icon/css-3-svgrepo-com.svg" alt="CSS">
+          </div>
+          <div class="skill-card-item">
+            <img src="/icon/javascript-svgrepo-com.svg" alt="JavaScript">
+          </div>
+          <div class="skill-card-item">
+            <img src="/icon/python-svgrepo-com.svg" alt="Python">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact" class="content">
+      <div class="contact-title">
+        <p class="contact-title-p">Keep In Touch</p>
+      </div>
+      <div class="contact-details">
+        <div class="input-row">
+          <input type="text" placeholder="Name" required>
+        </div>
+        <div class="input-row">
+          <input type="number" placeholder="Mobile Number" required>
+        </div>
+        <div class="input-row">
+          <input type="email" placeholder="Email" required>
+        </div>
+        <div class="input-row">
+          <textarea placeholder="Message" required></textarea>
+        </div>
+        <div class="contact-button">
+          <button class="send-button" onclick="sendMessage()">Send</button></div>
+        
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    function showContent(contentId) {
+      const contents = document.querySelectorAll('.content');
+      contents.forEach(content => content.classList.remove('active'));
+      document.getElementById(contentId).classList.add('active');
+    }
+
+    function sendMessage() {
+      alert("Message sent successfully!"); // Add your form submission logic here
+    }
+  </script>
+</body>
+</html>
+ 
