@@ -1,0 +1,209 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f3bd;
+}
+
+.button-container {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+  background-color: #333;
+}
+
+.content-container {
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  display: none;
+  font-size: 16px;
+}
+
+.content.active {
+  display: block;
+}
+
+.intro-section {
+  margin-bottom: 20px;
+}
+
+.intro-name {
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+
+.intro-text {
+  font-size: 16px;
+  color: gray;
+}
+
+.education-section {
+  margin-top: 20px;
+}
+
+.section-title {
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+
+.education-list {
+  padding: 0;
+  margin: 0;
+  margin-left: 15px;
+}
+
+.education-item {
+}
+
+.school-name {
+  font-size: 17px;
+}
+
+.education-detail {
+  font-size: 16px;
+  color: gray;
+}
+
+.skill-title {
+  font-size: 18px;
+  text-align: center;
+}
+
+.skill-title p {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.skill-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.skill-card-item {
+  height: 120px;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.skill-card-item img {
+  height: 60px;
+  width: 60px;
+}
+
+.contact-title p{
+  font-size: 16px;
+  color: gray;
+  text-align: center;
+  margin: 0;
+}
+
+#contact {
+
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+
+}
+
+.contact-title p {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-row {
+  display: flex;
+  flex-direction: column; /* Change to column for better layout */
+  margin-bottom: 15px;
+}
+
+.input-row input,
+.input-row textarea {
+  width: 95%; /* Full width */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.input-row textarea {
+  resize: vertical; /* Allow vertical resizing only */
+  height: 60px; /* Set a default height */
+  font-family: sans-serif;
+
+}
+
+.send-button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 20%;
+  
+}
+.contact-button{
+  display: flex;
+  justify-content: center;
+
+}
+
+button:hover {
+  background-color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-container {
+    padding: 15px;
+  }
+
+  .button-container button {
+    margin: 5px 0;
+    width: 50%;
+  }
+}
